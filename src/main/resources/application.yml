@@ -1,0 +1,17 @@
+server: 
+  port: 8080              #tomcat启动端口
+  tomcat:
+    uri-encoding :  UTF-8 #tomcat编码
+spring: 
+  application: 
+    name: springboot-demo #项目名称
+  thymeleaf:              #thymeleaf引擎，解析html，非必配
+    encoding: UTF-8
+    cache: true           #是够缓存页面，开发时设置为false，否者修改页面客户端刷新后无法实时显示
+    mode: LEGACYHTML5     #html5支持，默认配置不支持html5
+  data:                   #mongoDB数据库配置，没有数据库可不配
+    mongodb:
+       host: 127.0.0.1
+       port: 27017
+       database: demo_db
+debug: false
